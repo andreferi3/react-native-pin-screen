@@ -1,12 +1,54 @@
 {
-  "name": "react-native-pin-screen",
+  "name": "@andre/react-native-pin-screen",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "React Native PIN Screen component",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "build": "tsc",
+    "pretty": "prettier --single-quote --no-semi --jsx-bracket-same-line --write \"src/**/*.{ts, tsx}\""
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "jest": {
+    "preset": "react-native",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(js)$": "<rootDir>/node_modules/babel-jest",
+      "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "testPathIgnorePatterns": [
+      "\\.snap$",
+      "<rootDir>/node_modules/"
+    ],
+    "cacheDirectory": ".jest/cache"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreferi3/react-native-pin-screen"
+  },
+  "author": "Andre Feri Saputra",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andreferi3/react-native-pin-screen/issues"
+  },
+  "homepage": "https://github.com/andreferi3/react-native-pin-screen",
+  "devDependencies": {
+    "@types/react": "^16.9.34",
+    "@types/react-native": "^0.62.2",
+    "babel-jest": "^25.3.0",
+    "jest": "^25.3.0",
+    "prettier": "^2.0.4",
+    "react-native-typescript-transformer": "^1.2.13",
+    "react-test-renderer": "^16.13.1",
+    "ts-jest": "^25.3.1",
+    "typescript": "^3.8.3"
+  },
+  "peerDependencies": {
+    "react-native": "*",
+    "react": "*"
+  }
 }
